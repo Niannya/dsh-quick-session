@@ -1,0 +1,24 @@
+{
+  "name": "@niannya/dsh-quick-session",
+  "version": "0.1.0",
+  "description": "Project-optional Agent sessions for DeepSeek Harness.",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "repository": { "type": "git", "url": "https://github.com/Niannya/dsh-quick-session.git" },
+  "engines": { "dsh": "0.2.2-rc.3" },
+  "exports": {
+    ".": "./index.js", "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json", "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "host.js", "core.js", "constants.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md"],
+  "scripts": { "test": "node --test tests/*.test.js", "check": "node --check index.js && node --check host.js && node --check core.js && node --check client.js" },
+  "peerDependencies": { "@deepseek-ai/schemastery": "~3.19.0", "@deepseek-ai/dsh-tools": "0.2.2-rc.3" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web", "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-connection", "@deepseek-ai/dsh-client-locale", "@deepseek-ai/dsh-client-ui-renderer", "@deepseek-ai/dsh-client-ui-workspace", "@deepseek-ai/dsh-client-ui-sidebar"]
+    }
+  }
+}

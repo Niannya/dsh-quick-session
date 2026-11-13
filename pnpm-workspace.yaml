@@ -1,0 +1,2 @@
+# Keep registry age checks fail-closed instead of persisting automatic exemptions.
+minimumReleaseAgeStrict: true

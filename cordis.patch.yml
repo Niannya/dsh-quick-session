@@ -1,0 +1,5 @@
+- insert:
+    - id: niannya-quick-session
+      name: '@niannya/dsh-quick-session'
+      config:
+        directoryRoot: ''

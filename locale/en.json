@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Quick sessions",
+    "description": "Create ordinary Agent sessions without selecting a project. Each session gets a persistent directory under ~/Documents/DSH/QuickSessions. Keeps native tools, history, preset selection and permissions; never registers a hidden project or deletes files. Use the No project sidebar button. Agent-driven creation requires the caller’s existing full-access policy. Targets DSH 0.2.2-rc.3."
+  }
+}
